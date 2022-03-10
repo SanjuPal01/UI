@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Without Function Call</p>
+    <button onclick="fun()">Call Function</button>
+    <p id="demo2">Sum of 2 + 3 = </p>
+    <button onclick="sum(2,3)">Sum</button>
+
+    <button onclick="greeter('sanju')">Greet</button>
+    <script>
+        function fun(){
+            document.getElementById("demo").innerHTML = "With Function Call"
+        }
+        function sum(x, y){
+            document.getElementById("demo2").innerHTML += (x+y)
+        }
+        function greeter(name){
+            alert(name)
+        }
+        console.log(sumOf(3, 4))
+        function sumOf(x, y){
+            return x+y
+        }
+    </script>
+</body>
+</html>

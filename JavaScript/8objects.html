@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        obj1 = {
+            firstName: "Sanju", 
+            LastName: "Pal", 
+            Age: 22, 
+            Gender: "Male", 
+            fullName: function (){
+                return this.firstName + " " +this.LastName
+            }
+        }
+        console.log(obj1.fullName())
+        console.log(obj1.firstName)
+        console.log(obj1["LastName"])
+    </script>
+</head>
+<body>
+    <p>see Console</p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello First Heading</h1>
+    <p>Paragraph</p>
+    <button onclick="clickME1()">Writing on Page - (document.write)</button>
+    <button onclick="clickME2()">Alert - (window.alert)</button>
+    <button onclick="clickME3()">Print on Console - (console.log)</button>
+    <button onclick="clickME4()">Print the Page - (window.print)</button>
+
+    <script>
+        function clickME1(){
+            document.write(5+3)
+        }
+        function clickME2(){
+            window.alert(45)
+            alert(45)
+        }
+        function clickME3(){
+            console.log(5)
+        }
+        function clickME4(){
+            window.print()
+        }
+    </script>
+</body>
+</html>
