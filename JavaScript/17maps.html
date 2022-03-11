@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Not a preferred way
+        const f = new Map([
+            ["sanju", 22], 
+            ["Sameer", 20]
+        ]);
+        console.log(f)
+
+
+
+        // Preferred Way
+        const fruits = new Map()
+        fruits.set("sanju", 22)
+        fruits.set("Sameer", 20)
+        console.log(fruits.size)
+        console.log(fruits.get("sanju"))
+        fruits.set("sanju", 24)         // also update values
+        console.log(fruits.get("sanju"))
+        console.log(fruits.has("sanju"))
+        console.log(fruits.delete("sanju"))
+        console.log(fruits.has("sanju"))
+        fruits.set("Sanju", 22)
+        fruits.set("Karan", 26)
+
+        fruits.forEach((value, key) => {
+            console.log(key, value)
+        });
+
+        console.log(fruits.entries())
+        for(let x of fruits.entries()){
+            console.log(x[0], x[1])
+        }
+
+    </script>
+</body>
+</html>

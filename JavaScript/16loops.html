@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [1,2,3,4]
+        for (let i = 0 ; i < arr.length ; i++){
+            console.log(arr[i])
+        }
+
+
+        // The JavaScript for in statement loops through the properties of an Object
+        // The JavaScript for in statement can also loop over the properties of an Array: - But Order is not gurranted here
+        const person = {
+            name: "Sanju",
+            age: 22,
+            Gender: "Male"
+        }
+        for(let x in person){
+            console.log(x,person[x])
+        }
+
+
+
+        // Array.forEach()
+        // The forEach() method calls a function (a callback function) once for each array element.
+        arr.forEach((val)=>{console.log(val)})
+
+
+
+        // The For Of Loop
+        // The JavaScript for of statement loops through the values of an iterable object.
+
+        // It lets you loop over iterable data structures such as Arrays, Strings, Maps, NodeLists, and more:
+        for (let x of arr){
+            console.log(x)
+        }
+        let lang = "javascript"
+        for(let x of lang){
+            console.log(x)
+        }
+
+
+        // while and do-while loop
+        let i = 0
+        while(i < 5){
+            console.log(i)
+            i++;
+        }
+        i = 0
+        do{
+            console.log(i)
+            i++;
+        }while(i < 5);
+    </script>
+</body>
+</html>

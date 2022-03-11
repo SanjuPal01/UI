@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        const arr1 = ["sanju", "sameer", 24]
+        console.log(arr1)
+
+        const arr2 = new Array(23, 54)
+        arr2[0] = "Sameer"
+        arr2[1] = 24
+        console.log(arr2)
+        console.log(arr1.length)
+        console.log(arr1.sort())
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruits.length;
+
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+        text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";
+        document.getElementById("demo").innerHTML = text;
+
+
+        text = "<ol>";
+        fruits.forEach(element => {
+            text+="<li>"+element+"</li>"
+        });
+        text+="</ol>"
+        document.getElementById("demo").innerHTML = text;
+
+
+
+
+
+        arr1.push("Karan")
+        console.log(arr1)
+
+
+        console.log(typeof arr1)
+        console.log(Array.isArray(arr1))
+        console.log(arr1 instanceof Array)
+
+
+
+        console.log(arr1.toString())
+
+
+        console.log(arr1.join("*"))
+
+
+
+        console.log(arr1.pop())
+
+
+        const arr3 = [5,3,6,2]
+        arr3.sort()
+        console.log(arr3)
+        arr3.reverse()
+        console.log(arr3)
+
+        console.log(Math.max(...arr3))
+        console.log(Math.min(...arr3))
+    </script>
+</body>
+</html>
