@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class A{
+            constructor(name, year){
+                this.name = name
+                this.year = year
+            }
+            age() {
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+        let car1 = new A("Tesla", 2020)
+        let car2 = new A("BMW", 2019)
+        console.log(car1)
+        console.log(car2)
+        console.log(car1.age())
+    </script>
+</body>
+</html>
