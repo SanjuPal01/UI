@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./scripts/angular.js"></script>
+    <script src="./scripts/7ng-click.js"></script>
+    <style>
+        table{
+            border-collapse: collapse;
+            font-family: arial;
+        }
+        td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        th{
+            border: 1px solid black;
+            padding:5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body ng-app="myModule" ng-controller="myController">
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Like</th>
+                <th>Dislike</th>
+                <th>Like/Dislike</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="technology in technologies">
+                <td>{{ technology.name }}</td>
+                <td>{{ technology.like }}</td>
+                <td>{{ technology.dislike }}</td>
+                <td>
+                    <input type="button" value="Like" ng-click="incrementLikes(technology)">
+                    <input type="button" value="Dislike" ng-click="incrementDislikes(technology)">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>

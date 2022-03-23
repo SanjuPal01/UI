@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./scripts/angular.js"></script>
+    <script src="./scripts/5ng-model.js"></script>
+</head>
+<body ng-controller="myController">
+    <div>
+        <input type="text" ng-model="message"/>
+        </br>
+        {{ message }}
+        </br>
+        <input type="text" ng-model="greeting"/>
+        </br>
+        {{ greeting }}
+        </br>
+    </div>
+
+
+    </br>
+    </br>
+    <div>
+        <table>
+            <tr>
+                <td>FirstName: </td>
+                <td><input type="text" ng-model="employee.firstName"/></td>
+            </tr>
+            <tr>
+                <td>LastName: </td>
+                <td><input type="text" ng-model="employee.lastName"/></td>
+            </tr>
+            <tr>
+                <td>Gender: </td>
+                <td><input type="text" ng-model="employee.gender"/></td>
+            </tr>
+        </table>
+        </br>
+        </br>
+        <table>
+            <tr>
+                <td>FirstName: </td>
+                <td>{{employee.firstName}}</td>
+            </tr>
+            <tr>
+                <td>LastName: </td>
+                <td>{{employee.lastName}}</td>
+            </tr>
+            <tr>
+                <td>Gender: </td>
+                <td>{{employee.gender}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
