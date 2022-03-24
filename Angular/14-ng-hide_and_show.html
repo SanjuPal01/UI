@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/14-ng-hide_and_show.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        th {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <input type="checkbox" ng-model="hideSalary"> hide Salary  <!-- At first hideSalary is not defined hence it's value is undefined == false-->
+        </br>
+        </br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                    <th ng-hide="hideSalary">Salary</th>  <!-- Or you can also use ng-show    it's negation of ng-hide -->
+                    <th ng-show="hideSalary">Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td> {{ employee.name }} </td>
+                    <td> {{ employee.gender}} </td>
+                    <td> {{ employee.city}} </td>
+                    <td ng-hide="hideSalary"> {{ employee.salary  }} </td>
+                    <td ng-show="hideSalary"> #### </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

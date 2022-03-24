@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/9-orderBy.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        th {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        Sort By: <select ng-model="sortCol">
+            <option value="name">Name ASC</option>
+            <option value="dateOfBirth">Date of Birth ASC</option>
+            <option value="gender">gender ASC</option>
+            <option value="-salary">Salary DESC</option>
+        </select>
+        </br>
+        </br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date of Birth</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr ng-repeat="employee in employees | orderBy:'-name'"> -->
+                <!-- <tr ng-repeat="employee in employees | orderBy:'name':false"> -->
+                <tr ng-repeat="employee in employees | orderBy:sortCol:false">
+                    <td>{{ employee.name | uppercase}}</td>
+                    <td>{{ employee.dateOfBirth | date:"dd/MM/yyyy" }}</td>
+                    <td>{{ employee.gender | lowercase}}</td>
+                    <td>{{ employee.salary | number:2}}</td>
+                    <td>{{ employee.salary | currency:"₹":1}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/12-SearchBar_multiple.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        th {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <input type="text" ng-model="searchText.name" placeholder="Search Name"/>
+        <input type="text" ng-model="searchText.city" placeholder="Search City"/>
+        <input type="checkbox" ng-model="exactMatch"> Exact Match
+        </br>
+        </br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees | filter:searchText:exactMatch">
+                    <td> {{ employee.name }} </td>
+                    <td> {{ employee.gender }} </td>
+                    <td> {{ employee.salary  }} </td>
+                    <td> {{ employee.city  }} </td>
+                </tr>
+            </tbody>
+        </table>
+
+        </br>
+        </br>
+        </br>
+        </br>
+        <input type="text" ng-model="searchT" placeholder="Search City & Name"/>
+        </br>
+        </br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees | filter:search">
+                    <td> {{ employee.name }} </td>
+                    <td> {{ employee.gender }} </td>
+                    <td> {{ employee.salary  }} </td>
+                    <td> {{ employee.city  }} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
