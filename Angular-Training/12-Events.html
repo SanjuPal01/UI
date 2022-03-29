@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/12-Events.js"></script>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController" ng-init="count=0">
+        <button ng-click="count=count+1">Click Me</button><br>
+        {{count}}<br>
+    </div>
+
+    <div ng-controller="myController">
+        <button ng-click="showMenu()">Click me to see/hide Menu</button>
+        <div ng-show="showMe">
+            <h1>Menu:</h1>
+            <div>Pizza</div>
+            <div>Pasta</div>
+            <div>Pesce</div>
+          </div>  
+    </div>
+
+
+    <div ng-controller="myController">
+        <h1 style="display: inline;" ng-mousemove="mouseCoordinates($event)">Mouse Over Me!</h1>
+
+        <p>Coordinates: {{x + ', ' + y}}</p>
+    </div>
+</body>
+</html>

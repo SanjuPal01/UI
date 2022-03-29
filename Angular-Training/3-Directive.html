@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/3-Directive.js"></script>
+    <style>
+        h1{
+            display: inline;
+        }
+    </style>
+</head>
+<body ng-app="myApp" >
+    <!-- only one ng-app will be consider if you mention more than one then the first will be taken -->
+    <!-- <div ng-app="" ng-init="quantity=1;price=50">
+        Quantity: <input type="number" ng-model="quantity"><br><br>
+        Price: <input type="number" ng-model="price"><br><br>
+        Total in INR: {{ quantity*price }}<br><br>
+    </div> -->
+
+    <div ng-controller="myController">
+        Fruit Names: <br>
+        <ul>
+            <li ng-repeat="fruit in fruits">
+                {{ fruit }}
+            </li>
+        </ul>
+        Using Element Name: <my-own-directive></my-own-directive><br>
+        Using Attribute: <span my-own-directive></span><br>
+        using Class: <span class="my-own-directive"></span><br>
+        using Comment: <!-- directive: my-own-directive --><br>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="" style="background-color:{{BGcolor}}">
+    <div>
+        <h1 style="color:{{headingColor}}">Color Changer</h1>
+        Change Background Colour to: <input type="text" ng-model="BGcolor"/>
+        <br>
+        <br>
+        Change Heading Colour to: <input type="text" ng-model="headingColor"/>
+        <br>
+        <br>
+        <br>
+        Sum of Two Numbers: <br><br>
+        First Number: <input type="text" ng-model="First_1"><br>
+        Second Number: <input type="text" ng-model="Second_1"><br><br>
+        Result(Using ng-bind): <span ng-bind="First_1*Second_1"></span><br>
+        Result(Using Expression): <span>{{ First_1 * Second_1}}</span>
+
+        <br><br><br>
+        Solving NaN problem Here using ng-init<br><br>
+        Sum of Two Numbers: <br><br>
+        First Number: <input type="text" ng-model="First_2" ng-init="First_2=0"><br>
+        Second Number: <input type="text" ng-model="Second_2" ng-init="Second_2=0"><br><br>
+        Result(Using ng-bind): <span ng-bind="First_2*Second_2"></span><br>
+        Result(Using Expression): <span>{{ First_2 * Second_2}}</span>
+
+        <br><br><br>
+        Playing with Object:<br>
+        <div ng-init="person={firstName:'John',lastName:'Doe'}">
+            <p>The name is {{ person.lastName }}</p>
+            <p>The name is <span ng-bind="person.lastName"></span></p>
+        </div>
+        <br><br>
+        Playing with Arrays: <br>
+        <div ng-init="points=[1,15,19,2,40]">
+
+            <p>The third result is {{ points[2] }}</p>
+            <!-- <p ng-bind="points[2]"></p> -->
+            <p>The Third result is <span ng-bind="points[2]"></span></p>
+            </div>
+    </div>
+</body>
+</html>

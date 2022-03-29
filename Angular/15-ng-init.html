@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts/angular.js"></script>
+</head>
+<body ng-app>
+    <div ng-init="employees = [
+            { name: 'Ben', gender: 'Male', city: 'London' },
+            { name: 'Sara', gender: 'Female', city: 'Chennai' },
+            { name: 'Mark', gender: 'Male', city: 'Chicago' },
+            { name: 'Pam', gender: 'Female', city: 'London' },
+            { name: 'Todd', gender: 'Male', city: 'Chennai' }
+        ]">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td> {{ employee.name }} </td>
+                    <td> {{ employee.gender}} </td>
+                    <td> {{ employee.city}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+
+
+<!-- By using ng-init we can define the variables here. we can get rid from controllers. But it's not a good way -->
+<!-- It will simply create the controller and assign the value on the fly -->

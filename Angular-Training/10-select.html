@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/10-select.js"></script>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <select ng-model="selectedName" ng-options="x for x in names"></select><br><br>     <!-- if you want to make a drop down list use ng-options-->
+        You Selected: {{ selectedName }}<br><br><br>
+
+
+        Select Car <select ng-model="selectedCar" ng-options="x.model for x in cars"></select><br><br>
+        <h1>You selected: {{selectedCar.model}}</h1>
+        <p>Its color is: {{selectedCar.color}}</p>
+
+
+        <select ng-model="selectedCarObj" ng-options="x for (x, y) in carsObj">
+        </select>
+        
+        <h1>You selected: {{selectedCarObj}}</h1>
+
+
+
+        <select ng-model="Car" ng-options="y.brand for (x, y) in allCars">
+        </select>
+        <h1>You selected: {{Car.brand}}</h1>
+        <h2>Model: {{Car.model}}</h2>
+        <h3>Color: {{Car.color}}</h3>
+    </div>
+</body>
+</html>
+<!-- You can also use ng-repeat -->
