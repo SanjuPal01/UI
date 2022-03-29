@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts/angular.js"></script>
+    <style>
+        #myClass.ng-invalid{
+            background-color: red;
+        }
+        #myClass.ng-valid{
+            background-color: green;
+        }
+        #myClass.ng-empty{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- If the property in the ng-model attribute does not exist, AngularJS will create one for you. -->
+    <form ng-app="" name="myForm" ng-init="myFakeEmail='post@myweb.com'">
+        <div>
+            Enter Your Email Address: <input type="email" name="myAddress" ng-model="myEmail">
+            <span ng-show="myForm.myAddress.$error.email">Not valid</span>
+        </div>
+
+        <div>
+            Email:
+            <input type="email" name="myStatus" ng-model="myFakeEmail" required>
+            <p>Edit the e-mail address, and try to change the status.</p>
+            <h1>Status</h1>
+            <p>Valid: {{myForm.myStatus.$valid}} (if true, the value meets all criteria).</p>
+            <p>Dirty: {{myForm.myStatus.$dirty}} (if true, the value has been changed).</p>
+            <p>Touched: {{myForm.myStatus.$touched}} (if true, the field has been in focus).</p>
+        </div>
+
+
+        <!-- ng-model classes -->
+        Enter Email Address: <input type="email" id="myClass" name="withClass" ng-model="myText">
+    </form> 
+</body>
+</html>
