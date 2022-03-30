@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/16-ng-include.js"></script>
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <div ng-include="'http://localhost:8000/employeeTable.html'"></div>
+    </div>
+</body>
+</html>
+
+<!--
+Go to particular directory where your html file is residing and then run this command
+python3 -m http.server
+It will convert that directory into localhost server
+
+-->
+<!-- https://www.javatpoint.com/how-to-install-apache-on-mac -->
+
+<!-- /Library/WebServer/Documents -->
