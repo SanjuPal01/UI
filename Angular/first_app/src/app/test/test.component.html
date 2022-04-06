@@ -1,0 +1,28 @@
+<p>test works!</p>
+<h1>{{ "Hello " + name}}</h1>
+<h1>{{greetUser()}}</h1>
+<h1>{{siteUrl}}</h1>
+
+<!-- both works in the same way -->
+<input type="text" [id]="myID" value="Sanju"><br>
+<input type="text" id="{{myID}}" value="Sanju"><br>
+
+<!-- but here you can see the diff or you can say the power of property binding -->
+<input type="text" disabled="{{isDisabled}}"><br>       <!-- it won't works as we think(isDisabled false still it disabled it) hence we need to use property binding only -->
+<input type="text" [disabled]="isDisabled"><br>
+<input type="text" bind-disabled="isDisabled"><br>     <!--Easiest way-->
+
+
+<h2 class="text-success">Codevolution</h2>
+<h2 [class]="successClass">Codevolution</h2>
+<h2  class="text-special" [class]="successClass">Codevolution</h2>
+<h2 [class.text-danger]="hasError">Codevolution</h2>        <!--If the hasError property is true then it will use text-danger class-->
+
+<h2 [ngClass]="messageClasses">Codevolution</h2>
+
+<h2 [style.color]="'blue'">Heading 1</h2>
+<h2 [style.color]="highlight">Heading 1</h2>
+
+<h2 [style.color]="hasError ? 'red' : 'green'">Heading 2</h2>
+
+<h2 [ngStyle]="titleStyles">All Styles applied</h2>
