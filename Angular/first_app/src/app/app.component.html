@@ -485,7 +485,9 @@
 
 </div>
  -->
-<app-test></app-test>
+<!-- <app-test></app-test> -->
+<h1>{{message}}</h1>
+<app-structural-directive (childEvent)="message=$event" [parentData]="name"></app-structural-directive>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->

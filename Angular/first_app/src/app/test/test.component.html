@@ -26,3 +26,10 @@
 <h2 [style.color]="hasError ? 'red' : 'green'">Heading 2</h2>
 
 <h2 [ngStyle]="titleStyles">All Styles applied</h2>
+
+<input type="text" #myInput>
+
+<button (click)="consoleLog(myInput.value)">Click Me!</button>
+
+<input type="text" [(ngModel)]="inputData">
+{{inputData}}

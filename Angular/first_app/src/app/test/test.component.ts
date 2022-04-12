@@ -40,4 +40,10 @@ export class TestComponent implements OnInit {
   greetUser(){
     return "Welcome to my Angular Page";
   }
+  
+  consoleLog(data: any){
+    console.log(data)
+  }
+
+  public inputData = "";
 }
