@@ -1,0 +1,45 @@
+<p>structural-directive works!</p>
+
+<!-- 1st -->
+<div *ngIf="true">Sanju</div>
+
+<!-- 2nd -->
+<div *ngIf="isVisible; else elseBlock">Sanju</div>
+
+<ng-template #elseBlock>
+    <div>
+        Name is Hidden
+    </div>
+</ng-template>
+
+
+<!-- 3rd -->
+<div *ngIf="isVisible; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+    <div>
+        Sanju
+    </div>
+</ng-template>
+
+
+<!-- ngSwitch -->
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">You Picked Red</div>
+    <div *ngSwitchCase="'green'">You Picked Green</div>
+    <div *ngSwitchCase="'blue'">You Picked Blue</div>
+    <div *ngSwitchDefault>Pick Again</div>
+</div>
+
+
+<!-- ngFor -->
+
+<!-- like index there is first, last, odd, even -->
+<div *ngFor="let color of colors; index as i">
+    <h2>{{i}} {{color}}</h2>
+</div>
+
+
+<!-- {{"HEY " + parentData}} -->
+{{"HEY " + name}}<br><br>
+
+<button (click)="fireEvent()">Send Event</button>
