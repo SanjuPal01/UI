@@ -1,1 +1,1 @@
-# UI Trainingg
+# UI Training
